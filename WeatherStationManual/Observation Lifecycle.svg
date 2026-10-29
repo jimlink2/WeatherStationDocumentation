@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="800"
+     height="900"
+     viewBox="0 0 800 900">
+
+  <defs>
+
+    <style>
+      .label{
+        font-family:Arial,Helvetica,sans-serif;
+        font-size:20px;
+        text-anchor:middle;
+        dominant-baseline:middle;
+        fill:#222222;
+      }
+
+      .greenBox{
+        fill:#d8ead3;
+        stroke:#2e7d32;
+        stroke-width:3;
+      }
+
+      .goldBox{
+        fill:#f6e7bf;
+        stroke:#d9a300;
+        stroke-width:3;
+      }
+
+      .purpleBox{
+        fill:#e3d8ef;
+        stroke:#7b1fa2;
+        stroke-width:3;
+      }
+
+      .flow{
+        stroke:#17324d;
+        stroke-width:2.5;
+        fill:none;
+      }
+    </style>
+
+    <marker id="arrow"
+            markerWidth="10"
+            markerHeight="10"
+            refX="5"
+            refY="5"
+            orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z"
+            fill="#17324d"/>
+    </marker>
+
+  </defs>
+
+  <!-- Measurement -->
+
+  <rect x="220" y="30"
+        width="360"
+        height="70"
+        rx="12"
+        class="greenBox"/>
+
+  <text x="400" y="65"
+        class="label">
+    Measurement
+  </text>
+
+  <!-- Processing -->
+
+  <rect x="220" y="140"
+        width="360"
+        height="70"
+        rx="12"
+        class="greenBox"/>
+
+  <text x="400" y="175"
+        class="label">
+    Processing
+  </text>
+
+  <!-- Packet Generation -->
+
+  <rect x="220" y="250"
+        width="360"
+        height="70"
+        rx="12"
+        class="goldBox"/>
+
+  <text x="400" y="285"
+        class="label">
+    Packet Generation
+  </text>
+
+  <!-- ESP32-S3 Upload -->
+
+  <rect x="220" y="360"
+        width="360"
+        height="70"
+        rx="12"
+        class="greenBox"/>
+
+  <text x="400" y="395"
+        class="label">
+    ESP32-S3 Upload
+  </text>
+
+  <!-- weatherdb.php -->
+
+  <rect x="220" y="470"
+        width="360"
+        height="70"
+        rx="12"
+        class="purpleBox"/>
+
+  <text x="400" y="505"
+        class="label">
+    weatherdb.php
+  </text>
+
+  <!-- Database Insert -->
+
+  <rect x="220" y="580"
+        width="360"
+        height="70"
+        rx="12"
+        class="purpleBox"/>
+
+  <text x="400" y="615"
+        class="label">
+    Database Insert
+  </text>
+
+  <!-- Historical Record -->
+
+  <rect x="220" y="690"
+        width="360"
+        height="70"
+        rx="12"
+        class="purpleBox"/>
+
+  <text x="400" y="725"
+        class="label">
+    Historical Record
+  </text>
+
+  <!-- Flow Arrows -->
+
+  <line x1="400" y1="100" x2="400" y2="138"
+        class="flow"
+        marker-end="url(#arrow)"/>
+
+  <line x1="400" y1="210" x2="400" y2="248"
+        class="flow"
+        marker-end="url(#arrow)"/>
+
+  <line x1="400" y1="320" x2="400" y2="358"
+        class="flow"
+        marker-end="url(#arrow)"/>
+
+  <line x1="400" y1="430" x2="400" y2="468"
+        class="flow"
+        marker-end="url(#arrow)"/>
+
+  <line x1="400" y1="540" x2="400" y2="578"
+        class="flow"
+        marker-end="url(#arrow)"/>
+
+  <line x1="400" y1="650" x2="400" y2="688"
+        class="flow"
+        marker-end="url(#arrow)"/>
+
+</svg>

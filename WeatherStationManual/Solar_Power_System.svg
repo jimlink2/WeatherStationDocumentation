@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1000"
+     height="700"
+     viewBox="0 0 1000 700">
+
+  <defs>
+
+    <style>
+      .title {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        fill: #222222;
+        text-anchor: middle;
+      }
+
+      .subtitle {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        fill: #222222;
+        text-anchor: middle;
+      }
+
+      .notes {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        fill: #222222;
+      }
+
+      .solar {
+        fill: #dbe7f3;
+        stroke: #0057b8;
+        stroke-width: 3;
+      }
+
+      .charge {
+        fill: #ece0bb;
+        stroke: #d49a00;
+        stroke-width: 3;
+      }
+
+      .battery {
+        fill: #c7dec3;
+        stroke: #2f8f2f;
+        stroke-width: 3;
+      }
+
+      .regulator {
+        fill: #f6e4be;
+        stroke: #d97900;
+        stroke-width: 3;
+      }
+
+      .sensor {
+        fill: #efefef;
+        stroke: #7b8794;
+        stroke-width: 2;
+      }
+
+      .purple {
+        fill: #e2d8f0;
+        stroke: #7a1dbb;
+        stroke-width: 3;
+      }
+
+      .notebox {
+        fill: #efefef;
+        stroke: #b5b5b5;
+        stroke-width: 2;
+      }
+
+      .signal {
+        stroke: #555555;
+        stroke-width: 4;
+        fill: none;
+      }
+
+      .power {
+        stroke: #d97900;
+        stroke-width: 5;
+        fill: none;
+      }
+    </style>
+
+    <marker id="arrowOrange"
+            markerWidth="5"
+            markerHeight="5"
+            refX="4"
+            refY="2.5"
+            orient="auto">
+      <polygon points="0,0 5,2.5 0,5"
+               fill="#d97900"/>
+    </marker>
+
+    <marker id="arrowGray"
+            markerWidth="6"
+            markerHeight="5"
+            refX="5"
+            refY="2.5"
+            orient="auto">
+      <polygon points="0,0 6,2.5 0,5"
+               fill="#555555"/>
+    </marker>
+
+  </defs>
+
+  <!-- Weather Sensors -->
+
+  <rect x="730"
+        y="40"
+        width="220"
+        height="95"
+        rx="12"
+        ry="12"
+        class="sensor"/>
+
+  <text x="840" y="75" class="title">
+    Weather Sensors
+  </text>
+
+  <text x="840" y="100" class="subtitle">
+    Wind Vane
+  </text>
+
+  <text x="840" y="120" class="subtitle">
+    Anemometer • Rain Gauge
+  </text>
+
+  <!-- ESP32-C3 -->
+
+  <rect x="730"
+        y="190"
+        width="220"
+        height="75"
+        rx="12"
+        ry="12"
+        class="purple"/>
+
+  <text x="840" y="230" class="title">
+    ESP32-C3
+  </text>
+
+  <text x="840" y="250" class="subtitle">
+    Outdoor Controller
+  </text>
+
+  <!-- RYLR890 -->
+
+  <rect x="730"
+        y="330"
+        width="220"
+        height="75"
+        rx="12"
+        ry="12"
+        class="purple"/>
+
+  <text x="840" y="370" class="title">
+    RYLR890
+  </text>
+
+  <text x="840" y="390" class="subtitle">
+    LoRa Radio
+  </text>
+
+  <!-- Telemetry Flow -->
+
+  <line x1="840"
+        y1="135"
+        x2="840"
+        y2="190"
+        class="signal"
+        marker-end="url(#arrowGray)"/>
+
+  <line x1="840"
+        y1="265"
+        x2="840"
+        y2="330"
+        class="signal"
+        marker-end="url(#arrowGray)"/>
+
+  <!-- Solar Panel -->
+
+  <rect x="120"
+        y="50"
+        width="320"
+        height="80"
+        rx="12"
+        ry="12"
+        class="solar"/>
+
+  <text x="280" y="87" class="title">
+    Newpowa Solar Panel
+  </text>
+
+  <text x="280" y="110" class="subtitle">
+    NPA5S-12J • 5W • 12V
+  </text>
+
+  <!-- Charge Controller -->
+
+  <rect x="120"
+        y="190"
+        width="320"
+        height="95"
+        rx="12"
+        ry="12"
+        class="charge"/>
+
+  <text x="280" y="230" class="title">
+    SOLPERK Charge Controller
+  </text>
+
+  <text x="280" y="253" class="subtitle">
+    8A Waterproof Controller
+  </text>
+
+  <text x="280" y="273" class="subtitle">
+    Battery Charging &amp; Protection
+  </text>
+
+  <!-- Battery -->
+
+  <rect x="120"
+        y="350"
+        width="320"
+        height="95"
+        rx="12"
+        ry="12"
+        class="battery"/>
+
+  <text x="280" y="390" class="title">
+    LiFePO4 Battery
+  </text>
+
+  <text x="280" y="413" class="subtitle">
+    12V • 7Ah
+  </text>
+
+  <text x="280" y="433" class="subtitle">
+    Energy Storage
+  </text>
+
+  <!-- Buck Converter -->
+
+  <rect x="120"
+        y="510"
+        width="320"
+        height="95"
+        rx="12"
+        ry="12"
+        class="regulator"/>
+
+  <text x="280" y="550" class="title">
+    Buck Converter
+  </text>
+
+  <text x="280" y="573" class="subtitle">
+    12V → 3.3V
+  </text>
+
+  <text x="280" y="593" class="subtitle">
+    Power Regulation
+  </text>
+
+  <!-- Power Chain -->
+
+  <line x1="280"
+        y1="130"
+        x2="280"
+        y2="190"
+        class="power"
+        marker-end="url(#arrowOrange)"/>
+
+  <line x1="280"
+        y1="285"
+        x2="280"
+        y2="350"
+        class="power"
+        marker-end="url(#arrowOrange)"/>
+
+  <line x1="280"
+        y1="445"
+        x2="280"
+        y2="510"
+        class="power"
+        marker-end="url(#arrowOrange)"/>
+
+  <!-- Buck Converter -> ESP32-C3 -->
+
+  <line x1="440"
+        y1="540"
+        x2="620"
+        y2="540"
+        class="power"/>
+
+  <line x1="620"
+        y1="540"
+        x2="620"
+        y2="228"
+        class="power"/>
+
+  <line x1="620"
+        y1="228"
+        x2="730"
+        y2="228"
+        class="power"
+        marker-end="url(#arrowOrange)"/>
+
+  <!-- Buck Converter -> RYLR890 -->
+
+  <line x1="440"
+        y1="575"
+        x2="670"
+        y2="575"
+        class="power"/>
+
+  <line x1="670"
+        y1="575"
+        x2="670"
+        y2="368"
+        class="power"/>
+
+  <line x1="670"
+        y1="368"
+        x2="730"
+        y2="368"
+        class="power"
+        marker-end="url(#arrowOrange)"/>
+
+  <!-- Footer -->
+
+  <rect x="60"
+        y="635"
+        width="900"
+        height="50"
+        rx="8"
+        ry="8"
+        class="notebox"/>
+
+  <text x="80"
+        y="665"
+        class="notes">
+Power path: Solar Panel → Charge Controller → LiFePO4 Battery → Buck Converter → ESP32-C3 and RYLR890
+  </text>
+
+</svg>

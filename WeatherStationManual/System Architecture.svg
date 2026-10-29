@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1400"
+     height="1100"
+     viewBox="0 0 1400 900">
+
+<defs>
+
+<style>
+
+.title {
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.label {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    text-anchor: middle;
+}
+
+.small {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-anchor: middle;
+}
+
+.sensor {
+    fill: #e8f4ff;
+    stroke: #1565c0;
+    stroke-width: 2;
+}
+
+.controller {
+    fill: #e6ffe6;
+    stroke: #2e7d32;
+    stroke-width: 3;
+}
+
+.service {
+    fill: #fff3cd;
+    stroke: #cc7a00;
+    stroke-width: 3;
+}
+
+.flow {
+    stroke: #2c3e50;
+    stroke-width: 4;
+    fill: none;
+}
+
+.note {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+</style>
+
+<marker id="arrow"
+        markerWidth="10"
+        markerHeight="10"
+        refX="8"
+        refY="3"
+        orient="auto">
+
+    <path d="M0,0 L0,6 L9,3 z"
+          fill="#2c3e50"/>
+
+</marker>
+
+</defs>
+
+<!-- Title -->
+
+<text x="700"
+      y="45"
+      class="title">
+System Architecture
+</text>
+
+<!-- Sensors -->
+
+<rect x="520"
+      y="90"
+      width="360"
+      height="90"
+      rx="12"
+      class="sensor"/>
+
+<text x="700"
+      y="140"
+      class="label">
+Outdoor Weather Sensors
+</text>
+
+<!-- ESP32-C3 -->
+
+<rect x="520"
+      y="260"
+      width="360"
+      height="110"
+      rx="12"
+      class="controller"/>
+
+<text x="700"
+      y="315"
+      class="label">
+ESP32-C3 Outdoor Node
+</text>
+
+<text x="700"
+      y="340"
+      class="small">
+Wind Processing
+</text>
+
+<text x="700"
+      y="360"
+      class="small">
+Rain Processing
+</text>
+
+<!-- Arduino -->
+
+<rect x="520"
+      y="460"
+      width="360"
+      height="110"
+      rx="12"
+      class="controller"/>
+
+<text x="700"
+      y="515"
+      class="label">
+Arduino Mega 2560
+</text>
+
+<text x="700"
+      y="540"
+      class="small">
+Main Weather Controller
+</text>
+
+<!-- ESP32-S3 -->
+
+<rect x="520"
+      y="660"
+      width="360"
+      height="110"
+      rx="12"
+      class="controller"/>
+
+<text x="700"
+      y="715"
+      class="label">
+ESP32-S3 Gateway
+</text>
+
+<text x="700"
+      y="740"
+      class="small">
+Dashboard and Upload Services
+</text>
+
+<!-- Data Flow -->
+
+<line x1="700"
+      y1="180"
+      x2="700"
+      y2="260"
+      class="flow"
+      marker-end="url(#arrow)"/>
+
+<line x1="700"
+      y1="370"
+      x2="700"
+      y2="460"
+      class="flow"
+      marker-end="url(#arrow)"/>
+
+<line x1="700"
+      y1="570"
+      x2="700"
+      y2="660"
+      class="flow"
+      marker-end="url(#arrow)"/>
+
+<!-- LoRa Label -->
+
+<text x="800"
+      y="425"
+      class="label">
+LoRa 915 MHz
+</text>
+
+<!-- UART Label -->
+
+<text x="775"
+      y="615"
+      class="label">
+UART
+</text>
+
+<!-- Dashboard -->
+
+<rect x="60"
+      y="660"
+      width="260"
+      height="100"
+      rx="12"
+      class="service"/>
+
+<text x="190"
+      y="715"
+      class="label">
+Web Dashboard
+</text>
+
+<!-- Database -->
+
+<rect x="570"
+      y="820"
+      width="260"
+      height="60"
+      rx="10"
+      class="service"/>
+
+<text x="700"
+      y="858"
+      class="label">
+Database
+</text>
+
+<!-- Weather Underground -->
+
+<rect x="1080"
+      y="660"
+      width="260"
+      height="100"
+      rx="12"
+      class="service"/>
+
+<text x="1210"
+      y="705"
+      class="label">
+Weather
+</text>
+
+<text x="1210"
+      y="730"
+      class="label">
+Underground
+</text>
+
+<!-- Service Connections -->
+
+<line x1="520"
+      y1="715"
+      x2="320"
+      y2="715"
+      class="flow"
+      marker-end="url(#arrow)"/>
+
+<line x1="700"
+      y1="770"
+      x2="700"
+      y2="820"
+      class="flow"
+      marker-end="url(#arrow)"/>
+
+<line x1="880"
+      y1="715"
+      x2="1080"
+      y2="715"
+      class="flow"
+      marker-end="url(#arrow)"/>
+
+<!-- Notes -->
+
+<rect x="50"
+      y="900"
+      width="1300"
+      height="70"
+      rx="8"
+      fill="#ffffff"
+      stroke="#999999"
+      stroke-width="1"/>
+
+<text x="70"
+      y="935"
+      class="note">
+Weather data flows from the outdoor sensors through the ESP32-C3, across the LoRa link, into the Arduino Mega, and finally into the ESP32-S3 gateway for dashboard presentation and cloud distribution.
+</text>
+
+</svg>

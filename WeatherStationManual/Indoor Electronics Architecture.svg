@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1000"
+     height="620"
+     viewBox="0 0 1000 620">
+
+  <defs>
+    <style>
+      .title {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        fill: #222;
+        text-anchor: middle;
+      }
+      .subtitle {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        fill: #333;
+        text-anchor: middle;
+      }
+      .box {
+        stroke: #45627d;
+        stroke-width: 2;
+        rx: 8;
+        ry: 8;
+      }
+      .sensor { fill: #d9e1ea; }
+      .mega { fill: #dcdcdc; }
+      .gateway { fill: #dcebd8; }
+      .lora { fill: #efe4bf; }
+      .legend { fill: #f2f2f2; }
+
+      .arrow {
+        stroke: #1b2b3a;
+        stroke-width: 3;
+        fill: none;
+      }
+    </style>
+
+    <marker id="arrowhead"
+            markerWidth="10"
+            markerHeight="7"
+            refX="8"
+            refY="3.5"
+            orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1b2b3a"/>
+    </marker>
+  </defs>
+
+  <!-- I2C BUS -->
+  <line x1="125" y1="182" x2="720" y2="182"
+        stroke="#0d73d6"
+        stroke-width="5"/>
+
+  <!-- Top Sensors -->
+
+  <rect x="80" y="85" width="160" height="65"
+        class="box sensor"/>
+  <text x="160" y="115" class="title">SHT31-D</text>
+  <text x="160" y="135" class="subtitle">Temp / Humidity</text>
+
+  <rect x="340" y="85" width="160" height="65"
+        class="box sensor"/>
+  <text x="420" y="115" class="title">BMP280</text>
+  <text x="420" y="135" class="subtitle">Pressure</text>
+
+  <rect x="600" y="85" width="160" height="65"
+        class="box sensor"/>
+  <text x="680" y="115" class="title">DS3231 RTC</text>
+  <text x="680" y="135" class="subtitle">Timekeeping</text>
+
+  <!-- Sensor drops -->
+  <line x1="160" y1="150" x2="160" y2="182"
+        stroke="#1b2b3a" stroke-width="2"/>
+
+  <line x1="420" y1="150" x2="420" y2="182"
+        stroke="#1b2b3a" stroke-width="2"/>
+
+  <line x1="680" y1="150" x2="680" y2="182"
+        stroke="#1b2b3a" stroke-width="2"/>
+
+  <!-- Arduino Mega -->
+
+  <rect x="355" y="225" width="285" height="125"
+        class="box mega"/>
+
+  <text x="498" y="275" class="title">
+    Arduino Mega 2560
+  </text>
+
+  <text x="498" y="298" class="subtitle">
+    Main Weather Controller
+  </text>
+
+  <text x="498" y="322" class="subtitle">
+    LCD • EEPROM • RTC • Recovery Logic
+  </text>
+
+  <!-- Bus down arrow -->
+  <line x1="500" y1="182"
+        x2="500" y2="223"
+        class="arrow"
+        marker-end="url(#arrowhead)"/>
+
+  <!-- LCD Shield -->
+
+  <rect x="80" y="245" width="180" height="85"
+        class="box sensor"/>
+
+  <text x="170" y="285" class="title">
+    LCD Keypad Shield
+  </text>
+
+  <text x="170" y="305" class="subtitle">
+    User Interface
+  </text>
+
+  <!-- LCD arrow -->
+  <line x1="260" y1="287"
+        x2="355" y2="287"
+        class="arrow"
+        marker-end="url(#arrowhead)"/>
+
+  <!-- LoRa Module -->
+
+  <rect x="735" y="245" width="180" height="85"
+        class="box lora"/>
+
+  <text x="825" y="285" class="title">
+    RYLR890
+  </text>
+
+  <text x="825" y="305" class="subtitle">
+    LoRa Radio
+  </text>
+
+  <!-- Mega to LoRa -->
+  <line x1="640" y1="272"
+        x2="735" y2="272"
+        class="arrow"
+        marker-end="url(#arrowhead)"/>
+
+  <!-- ESP32-S3 -->
+
+  <rect x="355" y="460" width="285" height="95"
+        class="box gateway"/>
+
+  <text x="498" y="500" class="title">
+    ESP32-S3 Gateway
+  </text>
+
+  <text x="498" y="525" class="subtitle">
+    Dashboard • Database • WiFi
+  </text>
+
+  <!-- Mega down arrow -->
+  <line x1="500" y1="350"
+        x2="500" y2="458"
+        class="arrow"
+        marker-end="url(#arrowhead)"/>
+
+  <!-- Legend -->
+
+  <rect x="780" y="460" width="160" height="95"
+        class="box legend"/>
+
+  <text x="860" y="485" class="title">
+    Legend
+  </text>
+
+  <text x="860" y="510" class="subtitle">
+    Blue: I²C Bus
+  </text>
+
+  <text x="860" y="530" class="subtitle">
+    Gray: Data Links
+  </text>
+
+  <text x="860" y="550" class="subtitle">
+    Yellow: LoRa Module
+  </text>
+
+</svg>

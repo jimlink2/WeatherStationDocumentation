@@ -1,0 +1,123 @@
+===== COMPLETE RYLR LINE =====
++RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2408,416</OUT>,-40,3+RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2413,424</OUT>,-41,4+RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2418,416</OUT>,-38,4+RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2423,416</OUT>,-40,4+RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2428,427</OUT>,-40,4+RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2433,416</OUT>,-38,5+OK
+==============================
+Payload: 0.00,0.00,315,0.000,0.000,0,2408,416
+Parsing payload: 0.00,0.00,315,0.000,0.000,0,2408,416
+
+Outdoor Uptime: 2408 sec
+Packet Age: 32 sec
+
+
+Vane ADC: 416
+
+*** Outdoor data updated ***
+*** LoRa communication restored ***
+
+===== COMPLETE RYLR LINE =====
++RCV=0,13,<STATUS>,,0.0,-31,41
+==============================
+Received STATUS response
++RCV=0,13,<STATUS>,,0.0,-31,41
+Last LoRa UART activity: 2 sec ago
+Sending WX packet to ESP32-S3  17:52:1
+Age of outdoor data = 3410 ms
+Outdoor data received.
+Last LoRa UART activity: 0 sec ago
+Sending WX packet to ESP32-S3  17:52:6
+Age of outdoor data = 8443 ms
+Outdoor data received.
+Last LoRa UART activity: 0 sec ago
+Sending WX packet to ESP32-S3  17:52:11
+Age of outdoor data = 13476 ms
+Outdoor data received.
+Last LoRa UART activity: 1 sec ago
+Sending WX packet to ESP32-S3  17:52:16
+Age of outdoor data = 18512 ms
+No outdoor data.
+Age of outdoor data = 48752 ms
+No outdoor data.
+Last LoRa UART activity: 1 sec ago
+Sending WX packet to ESP32-S3  17:53:52
+Age of outdoor data = 53782 ms
+No outdoor data.
+Sent LoRa packet: <STATUS?>
+Requesting outdoor status...
+Last LoRa UART activity: 2 sec ago
+Sending WX packet to ESP32-S3  17:53:57
+Age of outdoor data = 58812 ms
+No outdoor data.
+
+===== COMPLETE RYLR LINE =====
++RCV=0,47,<OUT>0.00,0.0,-31,4+RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2503,425</OUT>,-38,4+RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2508,425</OUT>,-40,4+RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2513,425</OUT>,-41,4+RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2518,424</OUT>,-38,4+RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2523,422</OUT>,-40,4+RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2528,426</OUT>,-40,4+RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2533,425</OUT>,-38,3+RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2538,426</OUT>,-40,4+RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2543,424</OUT>,-40,4+RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2548,424</OUT>,-40,4+RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2553,425</OUT>,-38,4+OK
+==============================
+Missing </OUT>
+
+===== COMPLETE RYLR LINE =====
++RCV=0,47,<OUT>0.00,0.0,-32,37
+==============================
+Missing </OUT>
+Last LoRa UART activity: 3 sec ago
+Sending WX packet to ESP32-S3  17:54:2
+Age of outdoor data = 63857 ms
+No outdoor data.
+Last LoRa UART activity: 2 sec ago
+Sending WX packet to ESP32-S3  17:54:7
+Age of outdoor data = 68886 ms
+No outdoor data.
+Last LoRa UART activity: 2 sec ago
+Sending WX packet to ESP32-S3  17:54:12
+Age of outdoor data = 73913 ms
+No outdoor data.
+Last LoRa UART activity: 2 sec ago
+Sending WX packet to ESP32-S3  17:54:18
+Age of outdoor data = 78944 ms
+No outdoor data.
+Last LoRa UART activity: 2 sec ago
+Sending WX packet to ESP32-S3  17:54:23
+Age of outdoor data = 83974 ms
+No outdoor data.
+Last LoRa UART activity: 2 sec ago
+Sending WX packet to ESP32-S3  17:54:28
+Age of outdoor data = 89005 ms
+No outdoor data.
+Last LoRa UART activity: 2 sec ago
+Sending WX packet to ESP32-S3  17:54:33
+Age of outdoor data = 94035 ms
+No outdoor data.
+Last LoRa UART activity: 2 sec ago
+Sending WX packet to ESP32-S3  17:54:38
+Age of outdoor data = 99066 ms
+No outdoor data.
+Last LoRa UART activity: 2 sec ago
+Sending WX packet to ESP32-S3  17:54:43
+Age of outdoor data = 104097 ms
+No outdoor data.
+
+===== COMPLETE RYLR LINE =====
++RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2563,427</OUT>,-40,4+RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2568,428</OUT>,-40,4+RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2573,424</OUT>,-40,4+RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2578,425</OUT>,-41,4+RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2583,424</OUT>,-38,4+RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2588,424</OUT>,-40,4+RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2593,424</OUT>,-40,4+RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2598,427</OUT>,-43,3+RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2603,427</OUT>,-43,35
+==============================
+Payload: 0.00,0.00,315,0.000,0.000,0,2563,427
+Parsing payload: 0.00,0.00,315,0.000,0.000,0,2563,427
+
+Outdoor Uptime: 2563 sec
+Packet Age: 107 sec
+
+
+Vane ADC: 427
+
+*** Outdoor data updated ***
+*** LoRa communication restored ***
+Last LoRa UART activity: 2 sec ago
+Sending WX packet to ESP32-S3  17:54:48
+Age of outdoor data = 1734 ms
+Outdoor data received.
+Last LoRa UART activity: 2 sec ago
+Sending WX packet to ESP32-S3  17:54:53
+Age of outdoor data = 6770 ms
+Outdoor data received.
+
+===== COMPLETE RYLR LINE =====
++RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2608,424</OUT>,-41,4+RCV=0,47,<OUT>0.00,0.00,315,0.000,0.000,0,2613,426</OUT>,-44,43
+==============================
+Payload: 0.00,0.00,315,0.000,0.000,0,2608,424
+Parsing payload: 0.00,0.00,315,0.000,0.000,0,2608,424

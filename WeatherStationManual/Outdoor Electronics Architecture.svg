@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1000"
+     height="450"
+     viewBox="0 0 1000 450">
+
+  <defs>
+
+    <style>
+      .title{
+        font-family:Arial,sans-serif;
+        font-size:18px;
+        fill:#222222;
+        text-anchor:middle;
+      }
+
+      .subtitle{
+        font-family:Arial,sans-serif;
+        font-size:12px;
+        fill:#333333;
+        text-anchor:middle;
+      }
+
+      .box{
+        stroke:#45627d;
+        stroke-width:2;
+      }
+
+      .sensor{
+        fill:#d9e1ea;
+      }
+
+      .controller{
+        fill:#dcebd8;
+      }
+
+      .radio{
+        fill:#f3e3ce;
+      }
+
+      .antenna{
+        fill:#f2f2f2;
+      }
+
+      .link{
+        stroke:#1b2b3a;
+        stroke-width:3;
+        fill:none;
+      }
+
+      .bus{
+        stroke:#0d73d6;
+        stroke-width:5;
+        fill:none;
+      }
+
+      .buslabel{
+        font-family:Arial,sans-serif;
+        font-size:12px;
+        fill:#0d73d6;
+      }
+
+    </style>
+
+    <marker id="arrow"
+            markerWidth="8"
+            markerHeight="6"
+            refX="7"
+            refY="3"
+            orient="auto">
+      <polygon points="0,0 8,3 0,6"
+               fill="#1b2b3a"/>
+    </marker>
+
+  </defs>
+
+  <!-- Wind Vane -->
+
+  <rect x="70"
+        y="50"
+        width="200"
+        height="70"
+        rx="8"
+        ry="8"
+        class="box sensor"/>
+
+  <text x="170" y="88" class="title">
+    Wind Vane
+  </text>
+
+  <text x="170" y="108" class="subtitle">
+    GPIO0 (ADC)
+  </text>
+
+  <!-- Anemometer -->
+
+  <rect x="70"
+        y="175"
+        width="200"
+        height="70"
+        rx="8"
+        ry="8"
+        class="box sensor"/>
+
+  <text x="170" y="213" class="title">
+    Anemometer
+  </text>
+
+  <text x="170" y="233" class="subtitle">
+    GPIO10 (Interrupt)
+  </text>
+
+  <!-- Rain Gauge -->
+
+  <rect x="70"
+        y="300"
+        width="200"
+        height="70"
+        rx="8"
+        ry="8"
+        class="box sensor"/>
+
+  <text x="170" y="338" class="title">
+    Rain Gauge
+  </text>
+
+  <text x="170" y="358" class="subtitle">
+    GPIO3 (Interrupt)
+  </text>
+
+  <!-- Sensor Bus -->
+
+  <line x1="350"
+        y1="85"
+        x2="350"
+        y2="335"
+        class="bus"/>
+
+  <line x1="270"
+        y1="85"
+        x2="350"
+        y2="85"
+        class="link"/>
+
+  <line x1="270"
+        y1="210"
+        x2="350"
+        y2="210"
+        class="link"/>
+
+  <line x1="270"
+        y1="335"
+        x2="350"
+        y2="335"
+        class="link"/>
+
+  <text x="320"
+        y="210"
+        class="buslabel"
+        transform="rotate(-90 320 210)">
+    Sensor Bus
+  </text>
+
+  <!-- Bus to ESP32 -->
+
+  <line x1="350"
+        y1="210"
+        x2="400"
+        y2="210"
+        class="link"
+        marker-end="url(#arrow)"/>
+
+  <!-- ESP32-C3 -->
+
+  <rect x="400"
+        y="145"
+        width="230"
+        height="130"
+        rx="8"
+        ry="8"
+        class="box controller"/>
+
+  <text x="515"
+        y="190"
+        class="title">
+    ESP32-C3
+  </text>
+
+  <text x="515"
+        y="215"
+        class="subtitle">
+    Outdoor Telemetry Controller
+  </text>
+
+  <text x="515"
+        y="238"
+        class="subtitle">
+    Wind / Rain / LoRa / Uptime
+  </text>
+
+  <text x="515"
+        y="260"
+        class="subtitle">
+    GPIO4 TX / GPIO5 RX
+  </text>
+
+  <!-- RYLR890 -->
+
+  <rect x="720"
+        y="170"
+        width="180"
+        height="85"
+        rx="8"
+        ry="8"
+        class="box radio"/>
+
+  <text x="810"
+        y="210"
+        class="title">
+    RYLR890
+  </text>
+
+  <text x="810"
+        y="233"
+        class="subtitle">
+    915 MHz LoRa Radio
+  </text>
+
+  <line x1="630"
+        y1="210"
+        x2="720"
+        y2="210"
+        class="link"
+        marker-end="url(#arrow)"/>
+
+  <!-- Antenna -->
+
+  <rect x="760"
+        y="50"
+        width="100"
+        height="60"
+        rx="8"
+        ry="8"
+        class="antenna"
+        stroke="#45627d"
+        stroke-width="2"/>
+
+  <text x="810"
+        y="87"
+        class="title">
+    Antenna
+  </text>
+
+  <line x1="810"
+        y1="110"
+        x2="810"
+        y2="170"
+        class="link"
+        marker-end="url(#arrow)"/>
+
+</svg>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="800"
+     height="560"
+     viewBox="0 0 800 560">
+
+  <defs>
+
+    <style>
+      .label{
+        font-family:Arial,Helvetica,sans-serif;
+        font-size:20px;
+        text-anchor:middle;
+        dominant-baseline:middle;
+        fill:#222222;
+      }
+
+      .greenBox{
+        fill:#d8ead3;
+        stroke:#2e7d32;
+        stroke-width:3;
+      }
+
+      .purpleBox{
+        fill:#e3d8ef;
+        stroke:#7b1fa2;
+        stroke-width:3;
+      }
+
+      .blueBox{
+        fill:#d9e2ef;
+        stroke:#1565c0;
+        stroke-width:3;
+      }
+
+      .flow{
+        stroke:#17324d;
+        stroke-width:2.5;
+        fill:none;
+      }
+    </style>
+
+    <marker id="arrow"
+            markerWidth="10"
+            markerHeight="10"
+            refX="5"
+            refY="5"
+            orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z"
+            fill="#17324d"/>
+    </marker>
+
+  </defs>
+
+  <!-- Arduino Mega -->
+
+  <rect x="220" y="30"
+        width="360"
+        height="70"
+        rx="12"
+        class="greenBox"/>
+
+  <text x="400" y="65"
+        class="label">
+    Arduino Mega
+  </text>
+
+  <!-- ESP32-S3 -->
+
+  <rect x="220" y="140"
+        width="360"
+        height="70"
+        rx="12"
+        class="greenBox"/>
+
+  <text x="400" y="175"
+        class="label">
+    ESP32-S3
+  </text>
+
+  <!-- Dashboard Variables -->
+
+  <rect x="220" y="250"
+        width="360"
+        height="70"
+        rx="12"
+        class="purpleBox"/>
+
+  <text x="400" y="285"
+        class="label">
+    Dashboard Variables
+  </text>
+
+  <!-- Web Interface -->
+
+  <rect x="220" y="360"
+        width="360"
+        height="70"
+        rx="12"
+        class="blueBox"/>
+
+  <text x="400" y="395"
+        class="label">
+    Web Interface
+  </text>
+
+  <!-- Arrows -->
+
+  <line x1="400" y1="100" x2="400" y2="138"
+        class="flow"
+        marker-end="url(#arrow)"/>
+
+  <line x1="400" y1="210" x2="400" y2="248"
+        class="flow"
+        marker-end="url(#arrow)"/>
+
+  <line x1="400" y1="320" x2="400" y2="358"
+        class="flow"
+        marker-end="url(#arrow)"/>
+
+</svg>

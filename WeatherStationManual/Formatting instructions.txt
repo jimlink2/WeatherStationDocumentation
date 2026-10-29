@@ -1,0 +1,117 @@
+If you ask me to format the manuscript for Word, and you already have Volumes A–G in your Master Manuscript document, I would do something like this:
+
+1. Apply Word Styles
+Volume titles → Heading 1
+Major sections (Section 1, Section 2, Appendix A, etc.) → Heading 2
+Subsections (5.1 Purpose, 5.2 Software Architecture, etc.) → Heading 3
+Tables → Table Grid style
+Figure captions → Caption style
+Code blocks → Consolas 10 pt
+2. Insert Page Breaks
+
+Each of these starts on a new page:
+
+Plain Text
+Volume A
+Volume B
+Volume C
+Volume D
+Volume E
+Volume F
+Volume G
+
+and also:
+
+Plain Text
+Section 1
+Section 2
+...
+Section 14
+ 
+Appendix A
+Appendix B
+...
+Appendix H
+3. Generate Front Matter
+
+Create:
+
+Plain Text
+Cover Page
+Document Control
+Revision History
+Acronyms
+Table of Contents
+List of Figures
+List of Tables
+4. Format Figure Placeholders
+
+Convert things like:
+
+Plain Text
+Figure 4-7 Outdoor Sensor Mast
+
+into:
+
+Plain Text
+Figure 4-7. Outdoor Sensor Mast
+ 
+[IMAGE PLACEHOLDER]
+ 
+Insert:
+Pole mounted wind and rain sensors.jpg
+5. Format Tables Consistently
+
+Convert all inventories, GPIO assignments, BOM tables, EEPROM maps, and field dictionaries into uniform Word tables.
+
+6. Add Headers and Footers
+
+Header:
+
+Plain Text
+Wireless Weather Station Technical Manual
+ 
+
+Footer:
+
+Plain Text
+WWS-TM-001 Release 1.0
+Page X of Y
+ 
+7. Generate TOC
+
+In Word:
+
+Plain Text
+References
+→ Table of Contents
+→ Automatic Table
+8. Generate Lists
+Plain Text
+References
+→ Insert Table of Figures
+
+for:
+
+Figures
+Tables
+9. Final Output
+
+The result would be:
+
+Plain Text
+Wireless Weather Station Technical Manual
+Release 1.0
+
+with:
+
+Front Matter
+Sections 1–14
+Appendices A–H
+Volumes E–G supporting material
+Figure placeholders
+Tables
+TOC
+List of Figures
+List of Tables
+

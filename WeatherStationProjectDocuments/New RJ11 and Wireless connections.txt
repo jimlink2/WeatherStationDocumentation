@@ -1,0 +1,121 @@
+Wind and Rain LoRa Wireless wiring:
+
+RECEIVE LoRa (inside):
+
+LoRa Receiver Pin	Mega Pin	Purpose
+VCC             	5V	        Power
+GND	                GND	        Common ground
+TX	                D17 (RX2)	LoRa → Mega
+RX	                D16 (TX2)	Mega → LoRa
+
+TRANSMIT LoRa (outside):
+
+CAUTION:  On the bench, with USB connected to the ESP32 in the outside box: let USB power it, and disconnect the external 3.3 V while you’re plugged into the PC, for programming purposes.  Remove the SOLAR connection during this time.
+
+VDD → 3.3 V rail
+GND → GND rail
+TXD → ESP32 RX (e.g., GPIO21)
+RXD → ESP32 TX (e.g., GPIO20)
+NRST → not used
+NC → leave unconnected
+
+
+───────────────────────────────────────────────────────────────────────────────
+                       ARDUINO MEGA COMBINED PIN ASSIGNMENTS
+                         (with LCD Keypad Shield on top)
+───────────────────────────────────────────────────────────────────────────────
+
+                NOTE:  D1 is a pin soldered to the top of the shield,
+                       at the real D1, not the fake shield D1.
+
+                     ┌───────────────────────────────────────────────────────────┐
+                     │               ARDUINO MEGA to ESP32                       │
+                     │                                                           │
+                     │   20 (SDA) ◄──────── BMP280 + DS3231 + SHT31-D            │
+                     │   21 (SCL) ◄──────── BMP280 + DS3231 + SHT31-D            │
+                     │                                                           │
+                     │   TX1/D18 ────► ESP32 RX (pin 18) (via divider)           │
+                     │                                                           │
+                     └───────────────────────────────────────────────────────────┘
+
+
+───────────────────────────────────────────────────────────────────────────────
+                           I²C SENSORS (BMP280 + SHT31 + DS3231)
+                      Temperature, Pressure, & Humidity Round RJ12
+───────────────────────────────────────────────────────────────────────────────
+
+                     ┌──────────────────────────────────────────┐
+                     │               I²C BUS         RJ12 pin   │
+                     │                                          │
+                     │   BMP280 GND ─────────► GND       2      │
+                     │   BMP280 VCC ─────────► 5V        3      │
+                     │   BMP280 SDA ─────────► 20        4      │
+                     │   BMP280 SCL ─────────► 21        5      │
+                     │                                          │
+                     │   DS3231 GND ─────────► GND              │
+                     │   DS3231 VCC ─────────► 5V               │
+                     │   DS3231 SDA ─────────► 20               │
+                     │   DS3231 SCL ─────────► 21               │
+                     │                                          │
+                     │   SHT31-D GND ────────► GND              │
+                     │   SHT31-D VCC ────────► 5V               │
+                     │   SHT31-D SDA ────────► 20               │
+                     │   SHT31-D SCL ────────► 21               │
+                     │                                          │
+                     └──────────────────────────────────────────┘
+
+
+───────────────────────────────────────────────────────────────────────────────
+                                      ESP32‑S3 (inside)
+───────────────────────────────────────────────────────────────────────────────
+
+                NOTE:  RX is pin 18.
+
+                     ┌──────────────────────────────────────────────┐
+                     │                 ESP32-S3 pins                │
+                     │                                              │
+                     │   5V  ◄──────── Perfboard 5V rail            │
+                     │   GND ◄──────── Perfboard GND rail           │
+                     │   RX (18) ◄──── Level-shifted Arduino        │
+                     │   TX  ────────►  (unused for Arduino)        │
+                     │                                              │
+                     └──────────────────────────────────────────────┘
+
+________________________________________________________________________________
+                   Wireless (outside) 
+________________________________________________________________________________
+
+PIN_WIND on GPIO9 caused startup failures when the anemometer reed switch was closed during power-up.
+Moving PIN_WIND to GPIO10 fixed the problem.
+
+Summary Table for pins at the ESP32-C3
+Function	ESP32‑C3 Pin      	Notes
+Anemometer	GPIO10	            Digital input -- NOTE:  8 and 9 are strapping pins.  Do not use!
+Rain Gauge	GPIO3	            Digital input   DONE
+    10K resistor from GPIO3 to 3.3V rail
+Wind Vane	GPIO0 (ADC)	        Analog input    DONE
+    12K resistor from GPIO0 to 3.3V rail
+LoRa RXD	GPIO4	            LoRa
+LoRa TXD	GPIO5               LoRa
+LoRa RST not used.
+
+
+RJ11 connections for the sensors:
+
+Anemometer
+Pin 3  Red    GPIO10 on ESP32
+Pin 4  Green  Gnd
+
+Rain Gauge
+Pin 3  Red    GPIO3 on ESP32
+    10K resistor from GPIO3 to 3.3V rail
+Pin 4  Green  Gnd
+
+Wind Vane
+Pin 2  Black   Gnd
+Pin 3  Red     3.3V rail
+Pin 4  Yellow  unused
+Pin 5  Green   Analog to GPIO0
+    12K resistor from GPIO0 to 3.3V rail
+
+

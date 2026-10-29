@@ -1,0 +1,20 @@
+Solar panel make/model
+    5W(Watts) 12V(Volts) 5W Monocrystalline 10BB Solar Panel
+    Brand Name 	Newpowa
+    Included Components 	Pre-attached 3ft wire, heavy-duty anodized frame with pre-drilled holes for mounting
+    Model Number 	NPA5S-12J
+    Unit Count 	1 Count
+    Number of Items 	1
+    UPC 	578959248502
+    Number of Packs 	1
+    Item Type Name 	Solar Panel
+    Manufacturer 	Newpowa
+    Manufacturer Part Number 	NPA5S-12I
+    ASIN 	B00L60Y6Y4 
+
+Battery make/model
+    WOXABHSL 12V 7Ah LiFePO4 Battery, Max 10A Discharge
+    Model LFP1207
+    
+Charge controller make/model
+    SOLPERK 8A 12V Solar Charge Controller IP67 Waterproof Solar Panel Charge

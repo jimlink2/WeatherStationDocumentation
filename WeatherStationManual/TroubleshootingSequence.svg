@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="800"
+     height="1050"
+     viewBox="0 0 800 1050">
+
+<defs>
+
+<style>
+
+.title {
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.label {
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    text-anchor: middle;
+}
+
+.stage {
+    fill: #dfe8f3;
+    stroke: #0066cc;
+    stroke-width: 3;
+}
+
+.flow {
+    stroke: #203040;
+    stroke-width: 4;
+    fill: none;
+}
+
+</style>
+
+<marker id="arrow"
+        markerWidth="10"
+        markerHeight="10"
+        refX="8"
+        refY="3"
+        orient="auto">
+    <path d="M0,0 L0,6 L9,3 z"
+          fill="#203040"/>
+</marker>
+
+</defs>
+
+<!-- Title -->
+
+<text x="400"
+      y="50"
+      text-anchor="middle"
+      class="title">
+Troubleshooting Sequence
+</text>
+
+<!-- Power -->
+
+<rect x="200"
+      y="100"
+      width="400"
+      height="80"
+      rx="10"
+      class="stage"/>
+
+<text x="400"
+      y="148"
+      class="label">
+Power
+</text>
+
+<!-- Controllers -->
+
+<line x1="400" y1="180"
+      x2="400" y2="250"
+      class="flow"
+      marker-end="url(#arrow)"/>
+
+<rect x="200"
+      y="250"
+      width="400"
+      height="80"
+      rx="10"
+      class="stage"/>
+
+<text x="400"
+      y="298"
+      class="label">
+Controllers
+</text>
+
+<!-- LoRa -->
+
+<line x1="400" y1="330"
+      x2="400" y2="400"
+      class="flow"
+      marker-end="url(#arrow)"/>
+
+<rect x="200"
+      y="400"
+      width="400"
+      height="80"
+      rx="10"
+      class="stage"/>
+
+<text x="400"
+      y="448"
+      class="label">
+LoRa
+</text>
+
+<!-- Dashboard -->
+
+<line x1="400" y1="480"
+      x2="400" y2="550"
+      class="flow"
+      marker-end="url(#arrow)"/>
+
+<rect x="200"
+      y="550"
+      width="400"
+      height="80"
+      rx="10"
+      class="stage"/>
+
+<text x="400"
+      y="598"
+      class="label">
+Dashboard
+</text>
+
+<!-- Database -->
+
+<line x1="400" y1="630"
+      x2="400" y2="700"
+      class="flow"
+      marker-end="url(#arrow)"/>
+
+<rect x="200"
+      y="700"
+      width="400"
+      height="80"
+      rx="10"
+      class="stage"/>
+
+<text x="400"
+      y="748"
+      class="label">
+Database
+</text>
+
+<!-- Weather Underground -->
+
+<line x1="400" y1="780"
+      x2="400" y2="850"
+      class="flow"
+      marker-end="url(#arrow)"/>
+
+<rect x="200"
+      y="850"
+      width="400"
+      height="80"
+      rx="10"
+      class="stage"/>
+
+<text x="400"
+      y="898"
+      class="label">
+Weather Underground
+</text>
+
+</svg>
