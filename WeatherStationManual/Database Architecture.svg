@@ -1,115 +1,172 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="800"
-     height="1000"
-     viewBox="0 0 800 1000">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="900" viewBox="0 0 1000 900">
 
-  <defs>
+<defs>
 
-    <style>
-      .label{
-        font-family:Arial,Helvetica,sans-serif;
-        font-size:20px;
-        text-anchor:middle;
-        dominant-baseline:middle;
-        fill:#222222;
-      }
+<style>
+.title { font: bold 16px Arial, sans-serif; fill:#000; }
+.small { font: 11px Arial, sans-serif; fill:#000; }
 
-      .blueBox{
-        fill:#d9e2ef;
-        stroke:#1565c0;
-        stroke-width:3;
-      }
+.sensorBox {
+    fill:#dce6f2;
+    stroke:#2f75b5;
+    stroke-width:2;
+}
 
-      .greenBox{
-        fill:#d8ead3;
-        stroke:#2e7d32;
-        stroke-width:3;
-      }
+.controllerBox {
+    fill:#d9ead3;
+    stroke:#2e7d32;
+    stroke-width:2;
+}
 
-      .goldBox{
-        fill:#f6e7bf;
-        stroke:#d9a300;
-        stroke-width:3;
-      }
+.commBox {
+    fill:#f5e6c8;
+    stroke:#d99000;
+    stroke-width:2;
+}
 
-      .purpleBox{
-        fill:#e3d8ef;
-        stroke:#7b1fa2;
-        stroke-width:3;
-      }
+.serviceBox {
+    fill:#d9cfe5;
+    stroke:#7b1fa2;
+    stroke-width:2;
+}
 
-      .flow{
-        stroke:#17324d;
-        stroke-width:2.5;
-        fill:none;
-      }
-    </style>
+.noteBox {
+    fill:#f3f3f3;
+    stroke:#999;
+    stroke-width:1;
+}
 
-    <marker id="arrow"
-            markerWidth="10"
-            markerHeight="10"
-            refX="5"
-            refY="5"
-            orient="auto">
-      <path d="M0,0 L10,5 L0,10 Z"
-            fill="#17324d"/>
-    </marker>
+.arrow {
+    stroke:#1f3349;
+    stroke-width:3;
+    fill:none;
+    marker-end:url(#arrowhead);
+}
 
-  </defs>
+</style>
 
-  <!-- Outdoor Sensors -->
-  <rect x="220" y="30" width="360" height="70" rx="12" class="blueBox"/>
-  <text x="400" y="65" class="label">Outdoor Sensors</text>
+<marker id="arrowhead"
+        markerWidth="8"
+        markerHeight="8"
+        refX="7"
+        refY="4"
+        orient="auto">
+    <polygon points="0,0 8,4 0,8" fill="#1f3349"/>
+</marker>
 
-  <!-- ESP32-C3 -->
-  <rect x="220" y="140" width="360" height="70" rx="12" class="greenBox"/>
-  <text x="400" y="175" class="label">ESP32-C3</text>
+</defs>
 
-  <!-- LoRa -->
-  <rect x="220" y="250" width="360" height="70" rx="12" class="goldBox"/>
-  <text x="400" y="285" class="label">LoRa</text>
+<!-- Sensor Sources -->
 
-  <!-- Arduino Mega -->
-  <rect x="220" y="360" width="360" height="70" rx="12" class="greenBox"/>
-  <text x="400" y="395" class="label">Arduino Mega</text>
+<rect x="120" y="60" width="320" height="80" rx="10" class="sensorBox"/>
+<text x="280" y="95" text-anchor="middle" class="title">
+Radiation Shield
+</text>
+<text x="280" y="118" text-anchor="middle" class="small">
+Temperature • Humidity • Pressure • Time
+</text>
 
-  <!-- UART -->
-  <rect x="220" y="470" width="360" height="70" rx="12" class="goldBox"/>
-  <text x="400" y="505" class="label">UART</text>
+<rect x="560" y="60" width="320" height="80" rx="10" class="sensorBox"/>
+<text x="720" y="95" text-anchor="middle" class="title">
+Mast-mounted Sensor System
+</text>
+<text x="720" y="118" text-anchor="middle" class="small">
+Wind • Rainfall
+</text>
 
-  <!-- ESP32-S3 -->
-  <rect x="220" y="580" width="360" height="70" rx="12" class="greenBox"/>
-  <text x="400" y="615" class="label">ESP32-S3</text>
+<!-- ESP32-C3 -->
 
-  <!-- weatherdb.php -->
-  <rect x="220" y="690" width="360" height="70" rx="12" class="purpleBox"/>
-  <text x="400" y="725" class="label">weatherdb.php</text>
+<rect x="560" y="200" width="320" height="90" rx="10" class="controllerBox"/>
+<text x="720" y="240" text-anchor="middle" class="title">
+ESP32-C3
+</text>
+<text x="720" y="265" text-anchor="middle" class="small">
+Wind and Rain Processing
+</text>
 
-  <!-- Database -->
-  <rect x="220" y="800" width="360" height="70" rx="12" class="purpleBox"/>
-  <text x="400" y="835" class="label">Database</text>
+<!-- Arduino -->
 
-  <!-- Arrows -->
-  <line x1="400" y1="100" x2="400" y2="138"
-        class="flow" marker-end="url(#arrow)"/>
+<rect x="340" y="360" width="320" height="90" rx="10" class="controllerBox"/>
+<text x="500" y="400" text-anchor="middle" class="title">
+Arduino Mega 2560
+</text>
+<text x="500" y="425" text-anchor="middle" class="small">
+Weather Data Aggregation
+</text>
 
-  <line x1="400" y1="210" x2="400" y2="248"
-        class="flow" marker-end="url(#arrow)"/>
+<!-- ESP32-S3 -->
 
-  <line x1="400" y1="320" x2="400" y2="358"
-        class="flow" marker-end="url(#arrow)"/>
+<rect x="340" y="540" width="320" height="90" rx="10" class="controllerBox"/>
+<text x="500" y="580" text-anchor="middle" class="title">
+ESP32-S3 Gateway
+</text>
+<text x="500" y="605" text-anchor="middle" class="small">
+Upload Services
+</text>
 
-  <line x1="400" y1="430" x2="400" y2="468"
-        class="flow" marker-end="url(#arrow)"/>
+<!-- weatherdb.php -->
 
-  <line x1="400" y1="540" x2="400" y2="578"
-        class="flow" marker-end="url(#arrow)"/>
+<rect x="340" y="710" width="320" height="80" rx="10" class="serviceBox"/>
+<text x="500" y="758" text-anchor="middle" class="title">
+weatherdb.php
+</text>
 
-  <line x1="400" y1="650" x2="400" y2="688"
-        class="flow" marker-end="url(#arrow)"/>
+<!-- Database -->
 
-  <line x1="400" y1="760" x2="400" y2="798"
-        class="flow" marker-end="url(#arrow)"/>
+<rect x="340" y="840" width="320" height="50" rx="10" class="serviceBox"/>
+<text x="500" y="872" text-anchor="middle" class="title">
+Database
+</text>
+
+<!-- Connections -->
+
+<!-- Radiation Shield to Mega -->
+
+<path d="M280 140 L280 405 L340 405"
+      class="arrow"/>
+
+<!-- Mast Sensors to C3 -->
+
+<line x1="720" y1="140"
+      x2="720" y2="200"
+      class="arrow"/>
+
+<!-- C3 to Mega -->
+
+<path d="M560 245 L500 245 L500 360"
+      class="arrow"/>
+
+<!-- Mega to S3 -->
+
+<line x1="500" y1="450"
+      x2="500" y2="540"
+      class="arrow"/>
+
+<!-- S3 to PHP -->
+
+<line x1="500" y1="630"
+      x2="500" y2="710"
+      class="arrow"/>
+
+<!-- PHP to Database -->
+
+<line x1="500" y1="790"
+      x2="500" y2="840"
+      class="arrow"/>
+
+<!-- Labels -->
+
+<text x="295" y="250" class="small">I²C</text>
+<text x="540" y="280" class="small">LoRa</text>
+<text x="515" y="500" class="small">UART</text>
+<text x="515" y="675" class="small">HTTP/PHP</text>
+
+<!-- Footer -->
+
+<rect x="40" y="10" width="920" height="24" rx="3" class="noteBox"/>
+
+<text x="500" y="27" text-anchor="middle" class="small">
+Database architecture showing end-to-end flow from sensor acquisition through storage services
+</text>
 
 </svg>

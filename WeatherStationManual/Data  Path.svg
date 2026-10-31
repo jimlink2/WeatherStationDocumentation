@@ -1,296 +1,188 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="1400"
-     height="1100"
-     viewBox="0 0 1400 900">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700">
 
 <defs>
 
 <style>
+.title { font: bold 18px Arial, sans-serif; fill:#000; }
+.label { font: 14px Arial, sans-serif; fill:#000; }
+.small { font: 11px Arial, sans-serif; fill:#000; }
 
-.title {
-    font-family: Arial, sans-serif;
-    font-size: 28px;
-    font-weight: bold;
+.blueBox {
+    fill:#dce6f2;
+    stroke:#2f75b5;
+    stroke-width:2;
 }
 
-.label {
-    font-family: Arial, sans-serif;
-    font-size: 20px;
-    text-anchor: middle;
+.greenBox {
+    fill:#d9ead3;
+    stroke:#2e7d32;
+    stroke-width:2;
 }
 
-.small {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    text-anchor: middle;
+.goldBox {
+    fill:#f5e6c8;
+    stroke:#d99000;
+    stroke-width:2;
 }
 
-.sensor {
-    fill: #e8f4ff;
-    stroke: #1565c0;
-    stroke-width: 2;
+.noteBox {
+    fill:#f3f3f3;
+    stroke:#999;
+    stroke-width:1;
 }
 
-.controller {
-    fill: #e6ffe6;
-    stroke: #2e7d32;
-    stroke-width: 3;
-}
-
-.service {
-    fill: #fff3cd;
-    stroke: #cc7a00;
-    stroke-width: 3;
-}
-
-.flow {
-    stroke: #2c3e50;
-    stroke-width: 4;
-    fill: none;
-}
-
-.note {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
+.arrow {
+    stroke:#1f3349;
+    stroke-width:3;
+    fill:none;
+    marker-end:url(#arrowhead);
 }
 
 </style>
 
-<marker id="arrow"
-        markerWidth="10"
-        markerHeight="10"
-        refX="8"
-        refY="3"
+<marker id="arrowhead"
+        markerWidth="8"
+        markerHeight="8"
+        refX="7"
+        refY="4"
         orient="auto">
-
-    <path d="M0,0 L0,6 L9,3 z"
-          fill="#2c3e50"/>
-
+    <polygon points="0,0 8,4 0,8" fill="#1f3349"/>
 </marker>
 
 </defs>
 
-<!-- Title -->
+<!-- Radiation Shield -->
 
-<text x="700"
-      y="45"
-      class="title">
-Data Path
+<rect x="80" y="90" width="280" height="80" rx="10" class="blueBox"/>
+
+<text x="220" y="120" text-anchor="middle" class="title">
+Radiation Shield
 </text>
 
-<!-- Sensors -->
-
-<rect x="520"
-      y="90"
-      width="360"
-      height="90"
-      rx="12"
-      class="sensor"/>
-
-<text x="700"
-      y="140"
-      class="label">
-Outdoor Weather Sensors
+<text x="220" y="145" text-anchor="middle" class="title">
+Sensor Package
 </text>
 
-<!-- ESP32-C3 -->
+<!-- Mast Sensors -->
 
-<rect x="520"
-      y="260"
-      width="360"
-      height="110"
-      rx="12"
-      class="controller"/>
+<rect x="640" y="90" width="280" height="80" rx="10" class="blueBox"/>
 
-<text x="700"
-      y="315"
-      class="label">
-ESP32-C3 Outdoor Node
+<text x="780" y="120" text-anchor="middle" class="title">
+Mast-mounted
 </text>
 
-<text x="700"
-      y="340"
-      class="small">
-Wind Processing
-</text>
-
-<text x="700"
-      y="360"
-      class="small">
-Rain Processing
+<text x="780" y="145" text-anchor="middle" class="title">
+Sensor System
 </text>
 
 <!-- Arduino -->
 
-<rect x="520"
-      y="460"
-      width="360"
-      height="110"
-      rx="12"
-      class="controller"/>
+<rect x="360" y="280" width="280" height="100" rx="10" class="greenBox"/>
 
-<text x="700"
-      y="515"
-      class="label">
+<text x="500" y="325" text-anchor="middle" class="title">
 Arduino Mega 2560
 </text>
 
-<text x="700"
-      y="540"
-      class="small">
-Main Weather Controller
+<text x="500" y="350" text-anchor="middle" class="small">
+Weather Data Aggregation
 </text>
 
 <!-- ESP32-S3 -->
 
-<rect x="520"
-      y="660"
-      width="360"
-      height="110"
-      rx="12"
-      class="controller"/>
+<rect x="360" y="460" width="280" height="100" rx="10" class="greenBox"/>
 
-<text x="700"
-      y="715"
-      class="label">
+<text x="500" y="505" text-anchor="middle" class="title">
 ESP32-S3 Gateway
 </text>
 
-<text x="700"
-      y="740"
-      class="small">
-Dashboard and Upload Services
-</text>
-
-<!-- Data Flow -->
-
-<line x1="700"
-      y1="180"
-      x2="700"
-      y2="260"
-      class="flow"
-      marker-end="url(#arrow)"/>
-
-<line x1="700"
-      y1="370"
-      x2="700"
-      y2="460"
-      class="flow"
-      marker-end="url(#arrow)"/>
-
-<line x1="700"
-      y1="570"
-      x2="700"
-      y2="660"
-      class="flow"
-      marker-end="url(#arrow)"/>
-
-<!-- LoRa Label -->
-
-<text x="800"
-      y="425"
-      class="label">
-LoRa 915 MHz
-</text>
-
-<!-- UART Label -->
-
-<text x="775"
-      y="615"
-      class="label">
-UART
+<text x="500" y="530" text-anchor="middle" class="small">
+Presentation and Cloud Services
 </text>
 
 <!-- Dashboard -->
 
-<rect x="60"
-      y="660"
-      width="260"
-      height="100"
-      rx="12"
-      class="service"/>
+<rect x="40" y="470" width="220" height="80" rx="10" class="goldBox"/>
 
-<text x="190"
-      y="715"
-      class="label">
+<text x="150" y="520" text-anchor="middle" class="title">
 Web Dashboard
 </text>
 
 <!-- Database -->
 
-<rect x="570"
-      y="820"
-      width="260"
-      height="60"
-      rx="10"
-      class="service"/>
+<rect x="390" y="605" width="220" height="55" rx="10" class="goldBox"/>
 
-<text x="700"
-      y="858"
-      class="label">
+<text x="500" y="640" text-anchor="middle" class="title">
 Database
 </text>
 
 <!-- Weather Underground -->
 
-<rect x="1080"
-      y="660"
-      width="260"
-      height="100"
-      rx="12"
-      class="service"/>
+<rect x="740" y="470" width="220" height="80" rx="10" class="goldBox"/>
 
-<text x="1210"
-      y="705"
-      class="label">
+<text x="850" y="510" text-anchor="middle" class="title">
 Weather
 </text>
 
-<text x="1210"
-      y="730"
-      class="label">
+<text x="850" y="535" text-anchor="middle" class="title">
 Underground
 </text>
 
-<!-- Service Connections -->
+<!-- Arrows -->
 
-<line x1="520"
-      y1="715"
-      x2="320"
-      y2="715"
-      class="flow"
-      marker-end="url(#arrow)"/>
+<!-- Radiation shield to Mega -->
 
-<line x1="700"
-      y1="770"
-      x2="700"
-      y2="820"
-      class="flow"
-      marker-end="url(#arrow)"/>
+<path d="M220 170 L220 330 L360 330" class="arrow"/>
 
-<line x1="880"
-      y1="715"
-      x2="1080"
-      y2="715"
-      class="flow"
-      marker-end="url(#arrow)"/>
+<text x="245" y="245" class="small">
+I²C
+</text>
 
-<!-- Notes -->
+<!-- Mast System to Mega -->
 
-<rect x="50"
-      y="900"
-      width="1300"
-      height="70"
-      rx="8"
-      fill="#ffffff"
-      stroke="#999999"
-      stroke-width="1"/>
+<path d="M780 170 L780 330 L640 330" class="arrow"/>
 
-<text x="70"
-      y="935"
-      class="note">
-Weather data flows from the outdoor sensors through the ESP32-C3, across the LoRa link, into the Arduino Mega, and finally into the ESP32-S3 gateway for dashboard presentation and cloud distribution.
+<text x="700" y="245" class="small">
+LoRa
+</text>
+
+<!-- Mega to Gateway -->
+
+<line x1="500" y1="380"
+      x2="500" y2="460"
+      class="arrow"/>
+
+<!-- Gateway to Dashboard -->
+
+<line x1="360" y1="510"
+      x2="260" y2="510"
+      class="arrow"/>
+
+<!-- Gateway to Weather Underground -->
+
+<line x1="640" y1="510"
+      x2="740" y2="510"
+      class="arrow"/>
+
+<!-- Gateway to Database -->
+
+<line x1="500" y1="560"
+      x2="500" y2="605"
+      class="arrow"/>
+
+<!-- Footer -->
+
+<rect x="30" y="675"
+      width="940"
+      height="20"
+      rx="2"
+      class="noteBox"/>
+
+<text x="500"
+      y="689"
+      text-anchor="middle"
+      class="small">
+Weather measurements originate from two sensor subsystems, are consolidated by the Arduino Mega,
+forwarded to the ESP32-S3 gateway, and distributed to dashboard, database, and cloud services.
 </text>
 
 </svg>
