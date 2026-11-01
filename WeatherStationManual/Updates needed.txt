@@ -1,0 +1,9 @@
+Revisions needed for Weather Station
+
+
+Coding:
+    On both dashboards, change "Outdoor Station" to "Mast-mounted Station".
+    
+Manual:
+    Update Figure 10-1 screenshot
+
