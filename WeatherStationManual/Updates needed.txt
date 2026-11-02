@@ -4,7 +4,7 @@ Revisions needed for Weather Station
 Coding:
     On both dashboards, change "Outdoor Station" to "Mast-mounted Station".
         At ESP32-S3      DONE
-        At jimlink.net
+        At jimlink.net   DONE
     
 Manual:
     Update Figure 10-1 screenshot   DONE
