@@ -31,7 +31,7 @@ float rainin = 0.0;
 float rainRate = 0.0;
 float dailyrainin = 0.0;
 uint32_t rainTips = 0;
-uint32_t outdoorUptimeSec = 0;
+uint32_t mastUptimeSec = 0;
 int moistCode = 0;
 int dewCode = 0;
 unsigned long lastWU = 0;
@@ -281,13 +281,13 @@ void parseWeather(String line) {
         rainTips = 0;
     }
 
-    // OUTDOOR C3 UPTIME
+    // Mast-mounted C3 UPTIME
     if (upPos >= 0) {
-        outdoorUptimeSec =
+        mastUptimeSec =
             line.substring(upPos + 10,
                         line.indexOf(",", upPos)).toInt();
     } else {
-        outdoorUptimeSec = 0;
+        mastUptimeSec = 0;
     }
 }
 
@@ -406,7 +406,7 @@ void uploadToGoDaddy()
     url += "&rainday=" + String(dailyrainin,2);
 
     url += "&raintips=" + String(rainTips);
-    url += "&outuptime=" + String(outdoorUptimeSec);
+    url += "&outuptime=" + String(mastUptimeSec);
 
     url += "&date=" + dateStr;
     url += "&time=" + timeStr;
@@ -525,9 +525,9 @@ void setup() {
 
     page += "</div>";
 
-    // ----- OUTDOOR STATION -----
+    // ----- Mast-Mounted STATION -----
 
-    uint32_t up = outdoorUptimeSec;
+    uint32_t up = mastUptimeSec;
 
     uint32_t days = up / 86400;
     uint32_t hours = (up % 86400) / 3600;
@@ -548,13 +548,13 @@ void setup() {
     uptimeDisplay += String(seconds) + "s";
 
     page += "<div class='card'>";
-    page += "<div class='label'>Outdoor Station</div>";
+    page += "<div class='label'>Mast-Mounted Station</div>";
 
     page += "<div class='noemph'>";
     page += "C3 uptime: ";
     page += uptimeDisplay;
     page += " (";
-    page += commaNumber(outdoorUptimeSec);
+    page += commaNumber(mastUptimeSec);
     page += " seconds)";
     page += "</div>";
     
