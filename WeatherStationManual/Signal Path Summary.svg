@@ -1,8 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780">
-
-<defs>
-
-<style>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1200"
+   height="780"
+   viewBox="0 0 1200 780"
+   version="1.1"
+   id="svg26"
+   sodipodi:docname="Signal Path Summary.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview26"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.4576923"
+     inkscape:cx="600.26385"
+     inkscape:cy="390"
+     inkscape:window-width="3440"
+     inkscape:window-height="1351"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg26" />
+  <defs
+     id="defs1">
+    <style
+       id="style1">
 .title { font: bold 16px Arial, sans-serif; fill:#000; }
 .label { font: 14px Arial, sans-serif; fill:#000; }
 .small { font: 11px Arial, sans-serif; fill:#000; }
@@ -39,136 +69,332 @@
 }
 
 </style>
-
-<marker id="arrowhead"
-        markerWidth="8"
-        markerHeight="8"
-        refX="7"
-        refY="4"
-        orient="auto">
-    <polygon points="0,0 8,4 0,8" fill="#1f3349"/>
-</marker>
-
-</defs>
-
-<!-- HEADER -->
-
-<rect x="100" y="15" width="1000" height="24" rx="3" class="noteBox"/>
-
-<text x="600" y="31" text-anchor="middle" class="small">
+    <marker
+       id="arrowhead"
+       markerWidth="8"
+       markerHeight="8"
+       refX="7"
+       refY="4"
+       orient="auto">
+      <polygon
+         points="0,0 8,4 0,8"
+         fill="#1f3349"
+         id="polygon1" />
+    </marker>
+  </defs>
+  <!-- HEADER -->
+  <rect
+     x="100"
+     y="15"
+     width="1000"
+     height="24"
+     rx="3"
+     class="noteBox"
+     id="rect1" />
+  <text
+     x="600"
+     y="31"
+     text-anchor="middle"
+     class="small"
+     id="text1">
 Signal flow from environmental sensors through processing, communications, and gateway services
 </text>
-
-<!-- LEFT COLUMN : RADIATION SHIELD -->
-
-<rect x="60" y="80" width="260" height="70" rx="10" class="sensorBox"/>
-<text x="190" y="108" text-anchor="middle" class="title">SHT31-D</text>
-<text x="190" y="130" text-anchor="middle" class="small">Temperature / Humidity</text>
-
-<rect x="60" y="180" width="260" height="70" rx="10" class="sensorBox"/>
-<text x="190" y="208" text-anchor="middle" class="title">BMP280</text>
-<text x="190" y="230" text-anchor="middle" class="small">Pressure / Backup Temperature</text>
-
-<rect x="60" y="280" width="260" height="70" rx="10" class="sensorBox"/>
-<text x="190" y="308" text-anchor="middle" class="title">DS3231 RTC</text>
-<text x="190" y="330" text-anchor="middle" class="small">Date and Time</text>
-
-<!-- ARDUINO -->
-
-<rect x="360" y="210" width="320" height="110" rx="10" class="controllerBox"/>
-
-<text x="520" y="255" text-anchor="middle" class="title">
+  <!-- LEFT COLUMN : RADIATION SHIELD -->
+  <rect
+     x="60"
+     y="80"
+     width="260"
+     height="70"
+     rx="10"
+     class="sensorBox"
+     id="rect2" />
+  <text
+     x="190"
+     y="108"
+     text-anchor="middle"
+     class="title"
+     id="text2">SHT31-D</text>
+  <text
+     x="190"
+     y="130"
+     text-anchor="middle"
+     class="small"
+     id="text3">Temperature / Humidity</text>
+  <rect
+     x="60"
+     y="180"
+     width="260"
+     height="70"
+     rx="10"
+     class="sensorBox"
+     id="rect3" />
+  <text
+     x="190"
+     y="208"
+     text-anchor="middle"
+     class="title"
+     id="text4">BMP280</text>
+  <text
+     x="190"
+     y="230"
+     text-anchor="middle"
+     class="small"
+     id="text5">Pressure / Backup Temperature</text>
+  <rect
+     x="60"
+     y="280"
+     width="260"
+     height="70"
+     rx="10"
+     class="sensorBox"
+     id="rect5" />
+  <text
+     x="190"
+     y="308"
+     text-anchor="middle"
+     class="title"
+     id="text6">DS3231 RTC</text>
+  <text
+     x="190"
+     y="330"
+     text-anchor="middle"
+     class="small"
+     id="text7">Date and Time</text>
+  <!-- ARDUINO -->
+  <rect
+     x="360"
+     y="210"
+     width="320"
+     height="110"
+     rx="10"
+     class="controllerBox"
+     id="rect7" />
+  <text
+     x="520"
+     y="255"
+     text-anchor="middle"
+     class="title"
+     id="text8">
 Arduino Mega 2560
 </text>
-
-<text x="520" y="282" text-anchor="middle" class="small">
+  <text
+     x="520"
+     y="282"
+     text-anchor="middle"
+     class="small"
+     id="text9">
 Weather Data Aggregation
 </text>
-
-<!-- UART -->
-
-<rect x="360" y="410" width="320" height="70" rx="10" class="commBox"/>
-
-<text x="520" y="452" text-anchor="middle" class="title">
+  <!-- UART -->
+  <rect
+     x="360"
+     y="410"
+     width="320"
+     height="70"
+     rx="10"
+     class="commBox"
+     id="rect9" />
+  <text
+     x="520"
+     y="452"
+     text-anchor="middle"
+     class="title"
+     id="text10">
 UART (Serial1)
 </text>
-
-<!-- ESP32-S3 -->
-
-<rect x="360" y="560" width="320" height="100" rx="10" class="controllerBox"/>
-
-<text x="520" y="605" text-anchor="middle" class="title">
+  <!-- ESP32-S3 -->
+  <rect
+     x="360"
+     y="560"
+     width="320"
+     height="100"
+     rx="10"
+     class="controllerBox"
+     id="rect10" />
+  <text
+     x="520"
+     y="605"
+     text-anchor="middle"
+     class="title"
+     id="text11">
 ESP32-S3 Gateway
 </text>
-
-<text x="520" y="630" text-anchor="middle" class="small">
+  <text
+     x="520"
+     y="630"
+     text-anchor="middle"
+     class="small"
+     id="text12">
 Dashboard and Upload Services
 </text>
-
-<!-- RIGHT COLUMN : MAST SENSORS -->
-
-<rect x="860" y="80" width="260" height="70" rx="10" class="sensorBox"/>
-<text x="990" y="122" text-anchor="middle" class="title">Wind Vane</text>
-
-<rect x="860" y="180" width="260" height="70" rx="10" class="sensorBox"/>
-<text x="990" y="222" text-anchor="middle" class="title">Anemometer</text>
-
-<rect x="860" y="280" width="260" height="70" rx="10" class="sensorBox"/>
-<text x="990" y="322" text-anchor="middle" class="title">Rain Gauge</text>
-
-<!-- ESP32-C3 -->
-
-<rect x="820" y="410" width="340" height="110" rx="10" class="controllerBox"/>
-
-<text x="990" y="455" text-anchor="middle" class="title">
+  <!-- RIGHT COLUMN : MAST SENSORS -->
+  <rect
+     x="860"
+     y="80"
+     width="260"
+     height="70"
+     rx="10"
+     class="sensorBox"
+     id="rect12" />
+  <text
+     x="990"
+     y="122"
+     text-anchor="middle"
+     class="title"
+     id="text13">Wind Vane</text>
+  <rect
+     x="860"
+     y="180"
+     width="260"
+     height="70"
+     rx="10"
+     class="sensorBox"
+     id="rect13" />
+  <text
+     x="990"
+     y="222"
+     text-anchor="middle"
+     class="title"
+     id="text14">Anemometer</text>
+  <rect
+     x="860"
+     y="280"
+     width="260"
+     height="70"
+     rx="10"
+     class="sensorBox"
+     id="rect14" />
+  <text
+     x="990"
+     y="322"
+     text-anchor="middle"
+     class="title"
+     id="text15">Rain Gauge</text>
+  <!-- ESP32-C3 -->
+  <rect
+     x="820"
+     y="410"
+     width="340"
+     height="110"
+     rx="10"
+     class="controllerBox"
+     id="rect15" />
+  <text
+     x="990"
+     y="455"
+     text-anchor="middle"
+     class="title"
+     id="text16">
 ESP32-C3
 </text>
-
-<text x="990" y="482" text-anchor="middle" class="small">
+  <text
+     x="990"
+     y="482"
+     text-anchor="middle"
+     class="small"
+     id="text17">
 Wind and Rain Processing
 </text>
-
-<!-- LORA -->
-
-<rect x="820" y="610" width="340" height="70" rx="10" class="commBox"/>
-
-<text x="990" y="652" text-anchor="middle" class="title">
+  <!-- LORA -->
+  <rect
+     x="820"
+     y="610"
+     width="340"
+     height="70"
+     rx="10"
+     class="commBox"
+     id="rect17" />
+  <text
+     x="990"
+     y="652"
+     text-anchor="middle"
+     class="title"
+     id="text18">
 LoRa Link
 </text>
-
-<!-- LEFT SENSOR CONNECTIONS -->
-
-<line x1="320" y1="115" x2="360" y2="240" class="arrow"/>
-<line x1="320" y1="215" x2="360" y2="260" class="arrow"/>
-<line x1="320" y1="315" x2="360" y2="280" class="arrow"/>
-
-<text x="315" y="175" class="small">I²C Bus</text>
-
-<!-- ARDUINO TO UART -->
-
-<line x1="520" y1="320" x2="520" y2="410" class="arrow"/>
-
-<!-- UART TO S3 -->
-
-<line x1="520" y1="480" x2="520" y2="560" class="arrow"/>
-
-<!-- RIGHT SENSOR CONNECTIONS -->
-
-<line x1="990" y1="150" x2="990" y2="410" class="arrow"/>
-<line x1="990" y1="250" x2="990" y2="410" class="arrow"/>
-<line x1="990" y1="350" x2="990" y2="410" class="arrow"/>
-
-<!-- ESP32 TO LORA -->
-
-<line x1="990" y1="520" x2="990" y2="610" class="arrow"/>
-
-<!-- LORA TO ARDUINO -->
-
-<path d="M820 645 L740 645 L740 265 L680 265"
-      class="arrow"/>
-
-<text x="748" y="620" class="small">
+  <!-- LEFT SENSOR CONNECTIONS -->
+  <line
+     x1="320"
+     y1="115"
+     x2="360"
+     y2="240"
+     class="arrow"
+     id="line18" />
+  <line
+     x1="320"
+     y1="215"
+     x2="360"
+     y2="260"
+     class="arrow"
+     id="line19" />
+  <line
+     x1="320"
+     y1="315"
+     x2="360"
+     y2="280"
+     class="arrow"
+     id="line20" />
+  <text
+     x="315"
+     y="175"
+     class="small"
+     id="text20">I²C Bus</text>
+  <!-- ARDUINO TO UART -->
+  <line
+     x1="520"
+     y1="320"
+     x2="520"
+     y2="410"
+     class="arrow"
+     id="line21" />
+  <!-- UART TO S3 -->
+  <line
+     x1="520"
+     y1="480"
+     x2="520"
+     y2="560"
+     class="arrow"
+     id="line22" />
+  <!-- RIGHT SENSOR CONNECTIONS -->
+  <line
+     x1="1050"
+     y1="150"
+     x2="1050"
+     y2="410"
+     class="arrow"
+     id="line23" />
+  <line
+     x1="1080"
+     y1="250"
+     x2="1080"
+     y2="410"
+     class="arrow"
+     id="line24" />
+  <line
+     x1="1108"
+     y1="350"
+     x2="1108"
+     y2="410"
+     class="arrow"
+     id="line25" />
+  <!-- ESP32 TO LORA -->
+  <line
+     x1="990"
+     y1="520"
+     x2="990"
+     y2="610"
+     class="arrow"
+     id="line26" />
+  <!-- LORA TO ARDUINO -->
+  <path
+     d="M820 645 L740 645 L740 265 L680 265"
+     class="arrow"
+     id="path26" />
+  <text
+     x="748"
+     y="620"
+     class="small"
+     id="text26">
 915 MHz
 </text>
-
 </svg>
